@@ -1450,8 +1450,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Score:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 228efa3686141b0428d06dc713be22a4, type: 2}
+  m_sharedMaterial: {fileID: 9041816537901028590, guid: 228efa3686141b0428d06dc713be22a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2614,8 +2614,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 228efa3686141b0428d06dc713be22a4, type: 2}
+  m_sharedMaterial: {fileID: 9041816537901028590, guid: 228efa3686141b0428d06dc713be22a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5012,6 +5012,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 328038446}
     m_Modifications:
+    - target: {fileID: 8216365883743893530, guid: 9a4d2b73301c12b47b76dafb790afcf0, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 228efa3686141b0428d06dc713be22a4, type: 2}
+    - target: {fileID: 8216365883743893530, guid: 9a4d2b73301c12b47b76dafb790afcf0, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 9041816537901028590, guid: 228efa3686141b0428d06dc713be22a4, type: 2}
     - target: {fileID: 8216365884508468036, guid: 9a4d2b73301c12b47b76dafb790afcf0, type: 3}
       propertyPath: m_Name
       value: Countdown
