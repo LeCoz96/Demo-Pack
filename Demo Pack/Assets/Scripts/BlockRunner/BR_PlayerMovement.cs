@@ -5,24 +5,24 @@ using UnityEngine;
 
 public class BR_PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float m_playerMovement;
+    [SerializeField] float _playerMovement;
 
-    private Rigidbody2D m_rigidbody;
+    private Rigidbody2D _rigidbody;
 
-    private float m_horizontal;
+    private float _horizontal;
 
     void Start()
     {
-        m_rigidbody = GetComponent<Rigidbody2D>();
+        _rigidbody = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        m_horizontal = Input.GetAxisRaw("Horizontal");
+        _horizontal = Input.GetAxisRaw("Horizontal");
     }
 
     private void FixedUpdate()
     {
-        m_rigidbody.velocity = new Vector2(m_horizontal * m_playerMovement, m_rigidbody.velocity.y);
+        _rigidbody.velocity = new Vector2(_horizontal * _playerMovement, _rigidbody.velocity.y);
     }
 }
