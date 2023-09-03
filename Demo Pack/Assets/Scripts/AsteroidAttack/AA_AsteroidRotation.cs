@@ -1,13 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AA_AsteroidRotation : MonoBehaviour
 {
-    [SerializeField] private float _rotationSpeed;
+    [SerializeField] private float _rotationSpeedMin;
+    [SerializeField] private float _rotationSpeedMax;
+
+    private float _rotationSpeed;
+
+    void Start()
+    {
+        _rotationSpeed = Random.Range(_rotationSpeedMin, _rotationSpeedMax);
+    }
 
     void Update()
     {
-        //transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, _rotationSpeed));
+        transform.Rotate(0.0f, 0.0f, _rotationSpeed * Time.deltaTime, Space.Self);
     }
 }
