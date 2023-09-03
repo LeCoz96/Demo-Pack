@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 5624084786637920335}
   - component: {fileID: -6818963355217226366}
   - component: {fileID: -4436660499273127911}
+  - component: {fileID: 693304426482583303}
   - component: {fileID: -7099216195468002891}
+  - component: {fileID: 2770966502162827388}
   - component: {fileID: 7095756806442122482}
   m_Layer: 0
   m_Name: AA_Player
@@ -125,6 +127,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &693304426482583303
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4042045911378179443}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be7123e663c9a1e4db4907cf88a61166, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &-7099216195468002891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +160,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerMovement: 10
+--- !u!114 &2770966502162827388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4042045911378179443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e27fb7a39a7794fab948d0ee61341e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7095756806442122482
 MonoBehaviour:
   m_ObjectHideFlags: 0
