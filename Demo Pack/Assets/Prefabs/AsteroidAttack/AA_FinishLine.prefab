@@ -935,7 +935,7 @@ GameObject:
   - component: {fileID: 8675949698687984703}
   - component: {fileID: 8675949698687984702}
   m_Layer: 0
-  m_Name: BR_FinishLine
+  m_Name: AA_FinishLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
