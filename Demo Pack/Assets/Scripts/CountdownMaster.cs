@@ -9,7 +9,12 @@ public class CountdownMaster : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _countdownTimerText;
     [SerializeField] private SO_GameManager _gameManager;
 
-    void Awake()
+    //private void Awake()
+    //{
+    //    StartCoroutine(Countdown());
+    //}
+
+    private void OnEnable()
     {
         StartCoroutine(Countdown());
     }
@@ -17,6 +22,8 @@ public class CountdownMaster : MonoBehaviour
     private IEnumerator Countdown()
     {
         _gameManager.PauseGame();
+
+        _countdownTime = 3;
 
         while (_countdownTime > 0)
         {

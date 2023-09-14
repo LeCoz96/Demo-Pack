@@ -2,16 +2,23 @@ using UnityEngine;
 
 public class AA_PlayerCollisionDetection : MonoBehaviour
 {
-    private Animator m_animator;
+    [SerializeField] private GameObject _gameOverObject;
+
+    private Animator _animator;
 
     void Start()
     {
-        m_animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.transform.tag == "Asteroid")
-            m_animator.SetTrigger("Explode");
+            _animator.SetTrigger("Explode");
+    }
+
+    private void GameOver()
+    {
+        _gameOverObject.SetActive(true);
     }
 }
