@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class AA_PlayerCollisionDetection : MonoBehaviour
 {
-    [SerializeField] private GameObject _gameOverObject;
+    [SerializeField] private GameObject _loseObject;
+    [SerializeField] private GameObject _winObject;
 
     private Animator _animator;
 
@@ -15,10 +16,12 @@ public class AA_PlayerCollisionDetection : MonoBehaviour
     {
         if (collision.gameObject.transform.tag == "Asteroid")
             _animator.SetTrigger("Explode");
+        if (collision.gameObject.transform.tag == "FinishLine")
+            _winObject.SetActive(true);
     }
 
     private void GameOver()
     {
-        _gameOverObject.SetActive(true);
+        _loseObject.SetActive(true);
     }
 }

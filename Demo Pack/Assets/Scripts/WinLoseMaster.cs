@@ -1,6 +1,7 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class GameOverMaster : MonoBehaviour
+public class WinLoseMaster : MonoBehaviour
 {
     [SerializeField] private SO_GameManager _gameManager;
 

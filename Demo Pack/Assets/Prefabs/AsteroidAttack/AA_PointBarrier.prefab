@@ -125,4 +125,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _score: {fileID: 0}
-  _value: 0
+  _scoreManager: {fileID: 11400000, guid: 66608633640c2074fa95bbd73919c81e, type: 2}
