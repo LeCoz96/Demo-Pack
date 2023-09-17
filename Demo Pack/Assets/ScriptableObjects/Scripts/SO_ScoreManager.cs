@@ -36,12 +36,11 @@ public class SO_ScoreManager : ScriptableObject
         switch (BuildNumber)
         {
             case 2:
-                ++_aaEasyScore;
+                if (_aaEasyScore >= _maxScore)
+                    _aaEasyScore = _maxScore;
+                else
+                    ++_aaEasyScore;
                 CheckStarScore(_aaEasyScore);
-                //if (_aaEasyScore > _maxScore)
-                //    _aaEasyScore = _maxScore;
-                //else
-                //    ++_aaEasyScore;
                 break;
             case 3:
                 CheckStarScore(_aaMediumScore);
