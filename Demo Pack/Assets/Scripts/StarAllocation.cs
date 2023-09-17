@@ -10,7 +10,7 @@ public class StarAllocation : MonoBehaviour
 
     private void Awake()
     {
-        for (int i = 0; i < _scoreManager.GetScore(_buildNumber); i++)
+        for (int i = 1; i < _scoreManager.GetScore(_buildNumber); i++)
             Instantiate(_star, transform);
     }
 }

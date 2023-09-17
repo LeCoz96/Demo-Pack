@@ -5,6 +5,8 @@ public class SO_ScoreManager : ScriptableObject
 {
     [SerializeField] private GameObject _star;
 
+    private int _maxScore = 3;
+
     #region AsteroidAttack
     private int _aaEasyScore = 0;
     private int _aaMediumScore = 0;
@@ -35,14 +37,25 @@ public class SO_ScoreManager : ScriptableObject
         {
             case 2:
                 ++_aaEasyScore;
+                CheckStarScore(_aaEasyScore);
+                //if (_aaEasyScore > _maxScore)
+                //    _aaEasyScore = _maxScore;
+                //else
+                //    ++_aaEasyScore;
                 break;
             case 3:
-                ++_aaMediumScore;
+                CheckStarScore(_aaMediumScore);
                 break;
             case 4:
-                ++_aaHardScore;
+                CheckStarScore(_aaHardScore);
                 break;
         }
+    }
+
+    private void CheckStarScore(int Score)
+    {
+        if (Score > _maxScore)
+            Score = _maxScore;
     }
 
     public void AddStar(GameObject TargetObject)
