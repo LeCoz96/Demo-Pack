@@ -11,6 +11,9 @@ public class SO_ScoreManager : ScriptableObject
     public int GetCurrentScore() { return _currentScore; }
     public void SetCurrentScore(int Value) { _currentScore = Value; }
 
+    private bool _isAlive = false;
+    public void SetIsAlive(bool verdict) { _isAlive = verdict; }
+
     #region AsteroidAttack
     private int _aaEasyScore = 0;
     private int _aaMediumScore = 0;
@@ -46,28 +49,13 @@ public class SO_ScoreManager : ScriptableObject
 
     public void IncreaseScore(GameObject TargetObject)
     {
-        //switch (BuildNumber)
-        //{
-        //    case 2:
-        //        CheckStarScore(ref _aaEasyScore);
-        //        break;
-        //    case 3:
-        //        CheckStarScore(ref _aaMediumScore);
-        //        break;
-        //    case 4:
-        //        CheckStarScore(ref _aaHardScore);
-        //        break;
-        //    default:
-        //        break;
-        //}
-
         ++_currentScore;
         AddStar(TargetObject);
     }
 
     private void CheckStarScore(ref int Score)
     {
-        if (_currentScore > 0)
+        if (_isAlive)
         {
             if (Score >= _maxScore)
             {
@@ -84,10 +72,6 @@ public class SO_ScoreManager : ScriptableObject
                     Score = _currentScore;
                 }
             }
-        }
-        else
-        {
-            Score = 0;
         }
     }
 

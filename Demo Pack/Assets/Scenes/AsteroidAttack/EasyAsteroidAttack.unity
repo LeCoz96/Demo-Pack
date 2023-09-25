@@ -2297,11 +2297,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ae0a93854f7709439d8f60053b6a15b, type: 3}
---- !u!1 &1054444359 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8762516888312897283, guid: 6c411fa6246a86f4f9504e094f62c8bf, type: 3}
-  m_PrefabInstance: {fileID: 790972337347954161}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1061125146
 GameObject:
   m_ObjectHideFlags: 0
@@ -4830,6 +4825,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4178813261760685489, guid: 6c411fa6246a86f4f9504e094f62c8bf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818730430963210034, guid: 6c411fa6246a86f4f9504e094f62c8bf, type: 3}
+      propertyPath: _scoreManager
+      value: 
+      objectReference: {fileID: 11400000, guid: 66608633640c2074fa95bbd73919c81e, type: 2}
+    - target: {fileID: 8537882827239721117, guid: 6c411fa6246a86f4f9504e094f62c8bf, type: 3}
+      propertyPath: _scoreManager
+      value: 
+      objectReference: {fileID: 11400000, guid: 66608633640c2074fa95bbd73919c81e, type: 2}
+    - target: {fileID: 8762516888312897283, guid: 6c411fa6246a86f4f9504e094f62c8bf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c411fa6246a86f4f9504e094f62c8bf, type: 3}
 --- !u!1001 &2012104980544308917
@@ -5039,9 +5050,17 @@ PrefabInstance:
     - target: {fileID: 2770966502162827388, guid: 69f87e52311b5c44b942c4a28010f81c, type: 3}
       propertyPath: _winObject
       value: 
-      objectReference: {fileID: 1054444359}
+      objectReference: {fileID: 0}
     - target: {fileID: 2770966502162827388, guid: 69f87e52311b5c44b942c4a28010f81c, type: 3}
       propertyPath: _loseObject
+      value: 
+      objectReference: {fileID: 529435661}
+    - target: {fileID: 2770966502162827388, guid: 69f87e52311b5c44b942c4a28010f81c, type: 3}
+      propertyPath: _scoreManager
+      value: 
+      objectReference: {fileID: 11400000, guid: 66608633640c2074fa95bbd73919c81e, type: 2}
+    - target: {fileID: 2770966502162827388, guid: 69f87e52311b5c44b942c4a28010f81c, type: 3}
+      propertyPath: _winLoseObject
       value: 
       objectReference: {fileID: 529435661}
     - target: {fileID: 2770966502162827388, guid: 69f87e52311b5c44b942c4a28010f81c, type: 3}

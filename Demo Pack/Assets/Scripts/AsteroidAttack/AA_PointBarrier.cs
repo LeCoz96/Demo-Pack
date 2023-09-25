@@ -10,7 +10,6 @@ public class AA_PointBarrier : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            //_scoreManager.AddStar(_starValue);
             _scoreManager.IncreaseScore(_starValue);
         }
     }

@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class AA_PlayerCollisionDetection : MonoBehaviour
 {
-    [SerializeField] private GameObject _loseObject;
-    [SerializeField] private GameObject _winObject;
+    [SerializeField] private GameObject _winLoseObject;
     [SerializeField] private SO_ScoreManager _scoreManager;
 
     private Animator _animator;
@@ -21,13 +20,15 @@ public class AA_PlayerCollisionDetection : MonoBehaviour
         }
         if (collision.gameObject.transform.tag == "FinishLine")
         {
-            _winObject.SetActive(true);
+            _winLoseObject.SetActive(true);
+            _winLoseObject.GetComponent<WinLoseMaster>().WinLoseDecision(0);
         }
     }
 
     private void GameOver()
     {
         _scoreManager.SetCurrentScore(0);
-        _loseObject.SetActive(true);
+        _winLoseObject.SetActive(true);
+        _winLoseObject.GetComponent<WinLoseMaster>().WinLoseDecision(1);
     }
 }
