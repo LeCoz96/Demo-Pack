@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7795334089317203368}
   - component: {fileID: 7795334089317203371}
   - component: {fileID: 3642767786776931613}
-  - component: {fileID: 5715638310232681308}
+  - component: {fileID: 3812452139784718185}
   m_Layer: 0
   m_Name: AA_Asteroid_2
   m_TagString: Asteroid
@@ -102,7 +102,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.6
---- !u!114 &5715638310232681308
+--- !u!114 &3812452139784718185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7795334089317203369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 257686d2aa50562428c96b3276a62fe2, type: 3}
+  m_Script: {fileID: 11500000, guid: 8208309c23b10a64d82837df6352bf00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeedMin: 75

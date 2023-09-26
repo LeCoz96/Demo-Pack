@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AA_AsteroidRotation : MonoBehaviour
+public class AA_RotateObject : MonoBehaviour
 {
     [SerializeField] private float _rotationSpeedMin;
     [SerializeField] private float _rotationSpeedMax;
