@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Asteroid
   - FinishLine
+  - Enemy
+  - Barrier
   layers:
   - Default
   - TransparentFX
