@@ -16,6 +16,7 @@ public class AA_EnemyMovement : MonoBehaviour
     private Rigidbody2D _rigidbody;
 
     private bool _moveLeft = false;
+    private bool _atBarrier = false;
 
     void Start()
     {
@@ -26,14 +27,24 @@ public class AA_EnemyMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (_moveLeft)
+        // Cant have kinematic and physics
+
+
+        if (_atBarrier)
         {
-            _rigidbody.velocity = new Vector2(-_movementSpeed * Time.deltaTime, 0.0f);
+            _rigidbody.velocity = Vector2.zero;
         }
         else
         {
-            //_rigidbody.MovePosition(Vector2.Lerp(transform.position, _rightTarget.gameObject.transform.position, _movementSpeed * Time.deltaTime));
-            _rigidbody.velocity = new Vector2(_movementSpeed * Time.deltaTime, 0.0f);
+            if (_moveLeft)
+            {
+                _rigidbody.velocity = new Vector2(-_movementSpeed * Time.deltaTime, 0.0f);
+            }
+            else
+            {
+                //_rigidbody.MovePosition(Vector2.Lerp(transform.position, _rightTarget.gameObject.transform.position, _movementSpeed * Time.deltaTime));
+                _rigidbody.velocity = new Vector2(_movementSpeed * Time.deltaTime, 0.0f);
+            }
         }
     }
 
@@ -48,10 +59,14 @@ public class AA_EnemyMovement : MonoBehaviour
     private void FlipDirection()
     {
         _moveLeft = !_moveLeft;
+
+        _atBarrier = false;
     }
 
     private IEnumerator Pause(float Delay)
     {
+        _atBarrier = true;
+
         yield return new WaitForSeconds(Delay);
 
         FlipDirection();
