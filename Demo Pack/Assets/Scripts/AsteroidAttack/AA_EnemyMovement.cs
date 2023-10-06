@@ -15,6 +15,8 @@ public class AA_EnemyMovement : MonoBehaviour
 
     private Rigidbody2D _rigidbody;
 
+    private float _parentYAxisSpeed;
+
     private bool _moveLeft = false;
     private bool _atBarrier = false;
 
@@ -23,6 +25,11 @@ public class AA_EnemyMovement : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
 
         _movementSpeed = Random.Range(_minSpeed, _maxSpeed);
+    }
+
+    void Update()
+    {
+        _parentYAxisSpeed = transform.GetComponentInParent<Transform>().position.y;
     }
 
     void FixedUpdate()
@@ -38,12 +45,11 @@ public class AA_EnemyMovement : MonoBehaviour
         {
             if (_moveLeft)
             {
-                _rigidbody.velocity = new Vector2(-_movementSpeed * Time.deltaTime, 0.0f);
+                _rigidbody.velocity = new Vector2(-_movementSpeed, _rigidbody.velocity.y) * Time.deltaTime;
             }
             else
             {
-                //_rigidbody.MovePosition(Vector2.Lerp(transform.position, _rightTarget.gameObject.transform.position, _movementSpeed * Time.deltaTime));
-                _rigidbody.velocity = new Vector2(_movementSpeed * Time.deltaTime, 0.0f);
+                _rigidbody.velocity = new Vector2(_movementSpeed, _rigidbody.velocity.y) * Time.deltaTime;
             }
         }
     }

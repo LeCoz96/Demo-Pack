@@ -13,6 +13,6 @@ public class AA_MovingObject : MonoBehaviour
 
     void FixedUpdate()
     {
-        _rigidbody.velocity = new Vector2(0.0f, -_movementSpeed * Time.fixedDeltaTime);
+        _rigidbody.velocity = new Vector2(0.0f, -_movementSpeed * Time.deltaTime);
     }
 }
