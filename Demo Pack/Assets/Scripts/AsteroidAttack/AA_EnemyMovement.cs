@@ -15,8 +15,6 @@ public class AA_EnemyMovement : MonoBehaviour
 
     private Rigidbody2D _rigidbody;
 
-    private float _parentYAxisSpeed;
-
     private bool _moveLeft = false;
     private bool _atBarrier = false;
 
@@ -29,14 +27,11 @@ public class AA_EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        _parentYAxisSpeed = transform.GetComponentInParent<Transform>().position.y;
+        // Match parent Y using transform.position.y
     }
 
     void FixedUpdate()
     {
-        // Cant have kinematic and physics
-
-
         if (_atBarrier)
         {
             _rigidbody.velocity = Vector2.zero;
@@ -45,11 +40,11 @@ public class AA_EnemyMovement : MonoBehaviour
         {
             if (_moveLeft)
             {
-                _rigidbody.velocity = new Vector2(-_movementSpeed, _rigidbody.velocity.y) * Time.deltaTime;
+                _rigidbody.velocity = Vector2.left  * (_movementSpeed * Time.deltaTime);
             }
             else
             {
-                _rigidbody.velocity = new Vector2(_movementSpeed, _rigidbody.velocity.y) * Time.deltaTime;
+                _rigidbody.velocity = Vector2.right * (_movementSpeed * Time.deltaTime);
             }
         }
     }
